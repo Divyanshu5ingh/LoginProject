@@ -12,7 +12,6 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-
 namespace PasswordlessAuthentication.EntityFrameworkCore;
 
 [ReplaceDbContext(typeof(IIdentityDbContext))]
@@ -51,6 +50,7 @@ public class PasswordlessAuthenticationDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
+    
 
     public PasswordlessAuthenticationDbContext(DbContextOptions<PasswordlessAuthenticationDbContext> options)
         : base(options)
